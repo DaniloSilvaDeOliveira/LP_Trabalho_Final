@@ -128,6 +128,14 @@ void procurarNoVetor(ponteiro_Conta vetorConta[], int posicao,int numero){
     for (int i = 0; i < posicao; i++) {
         if(numero == vetorConta[i]->numero){
             printf("posicao no vetor: %d\n",i);
+            printf("numero: %d \n", vetorConta[i]->numero);
+            printf("cliente: %s \n", vetorConta[i]->cliente);
+            if(vetorConta[i]->especial == 0){
+                printf("tipo: normal\n");
+            }else if(vetorConta[i]->especial == 1){
+                printf("tipo: especial\n");
+            }
+            printf("Valor: %.2lf \n", vetorConta[i]->saldo);
             contador = 1;
             system("pause");
         }
